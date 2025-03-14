@@ -11,6 +11,33 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" rel="stylesheet" />
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const descriptions = [
+        { id: "desc1", btn: "toggleBtn1", shortText: "Seorang software developer website mengembangkan dan memelihara aplikasi web...", fullText: "Seorang software developer website mengembangkan dan memelihara aplikasi web, baik di sisi frontend (HTML, CSS, JavaScript) maupun backend (Node.js, PHP, Python). Mereka juga memastikan performa, keamanan, dan pengalaman pengguna yang optimal." },
+        { id: "desc2", btn: "toggleBtn2", shortText: "Seorang web designer bertanggung jawab merancang tampilan dan pengalaman pengguna...", fullText: "Seorang web designer bertanggung jawab merancang tampilan dan pengalaman pengguna yang menarik dan fungsional menggunakan desain grafis serta prinsip UI/UX." },
+        { id: "desc3", btn: "toggleBtn3", shortText: "Cyber security specialist bertanggung jawab dalam melindungi data dan sistem dari serangan...", fullText: "Cyber security specialist bertanggung jawab dalam melindungi data dan sistem dari serangan siber dengan menerapkan protokol keamanan dan enkripsi data." }
+      ];
+      
+      descriptions.forEach(item => {
+        let desc = document.getElementById(item.id);
+        let btn = document.getElementById(item.btn);
+        let isExpanded = false;
+        desc.textContent = item.shortText;
+        
+        btn.addEventListener("click", function () {
+          if (isExpanded) {
+            desc.textContent = item.shortText;
+            btn.textContent = "Show More";
+          } else {
+            desc.textContent = item.fullText;
+            btn.textContent = "Show Less";
+          }
+          isExpanded = !isExpanded;
+        });
+      });
+    });
+  </script>
   <script type="module">
     import KeenSlider from 'https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/+esm'
 
@@ -77,7 +104,7 @@
   </script>
 
   <style>
-   
+
   </style>
   <style>
     /* Add pulsing animation to make gradient more noticeable */
@@ -100,7 +127,7 @@
 
 <body>
 
-  
+
 
   <!-- Navbar -->
   <header class="fixed w-screen z-50 h-16">
@@ -117,7 +144,7 @@
           class="relative text-base font-bold w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-primary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-600 after:origin-center">
           Home
         </a>
-        <a href="#"
+        <a href="/public/about.html"
           class="relative text-base w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-primary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-600 after:origin-center">
           About
         </a>
@@ -152,7 +179,7 @@
     </div>
   </header>
   <!-- End Navbar -->
-   <!-- From Uiverse.io by wilsondesouza -->
+  <!-- From Uiverse.io by wilsondesouza -->
   <ul class="ulku example-2 absolute">
     <li class="icon-content">
       <a href="https://linkedin.com/" aria-label="LinkedIn" data-social="linkedin">
@@ -179,7 +206,8 @@
       <div class="tooltip">GitHub</div>
     </li>
     <li class="icon-content">
-      <a href="https://www.instagram.com/mjit.course?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="blank" aria-label="Instagram" data-social="instagram">
+      <a href="https://www.instagram.com/mjit.course?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        target="blank" aria-label="Instagram" data-social="instagram">
         <div class="filled"></div>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram"
           viewBox="0 0 16 16" xml:space="preserve">
@@ -191,7 +219,8 @@
       <div class="tooltip">Instagram</div>
     </li>
     <li class="icon-content">
-      <a href="https://www.instagram.com/mjit.course?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="blank" aria-label="Youtube" data-social="youtube">
+      <a href="https://www.instagram.com/mjit.course?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        target="blank" aria-label="Youtube" data-social="youtube">
         <div class="filled"></div>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube"
           viewBox="0 0 16 16" xml:space="preserve">
@@ -335,32 +364,7 @@
             </div>
           </div>
         </div>
-        <div class="bg-white p-4 shadow-md rounded-xl flex items-start gap-3 w-64 border border-gray-200">
-          <img src="https://randomuser.me/api/portraits/men/4.jpg" class="w-12 h-12 rounded-full" alt="Profile">
-          <div class="overflow-hidden">
-            <h2 class="text-lg font-bold">Michael Brown</h2>
-            <p class="text-gray-500 text-sm">@michael</p>
-            <p class="text-gray-800 mt-2 truncate">This looks great on both desktop and mobile screens.</p>
-          </div>
-        </div>
-        <div class="bg-white p-4 shadow-md rounded-xl flex items-start gap-3 w-64 border border-gray-200">
-          <img src="https://randomuser.me/api/portraits/women/5.jpg" class="w-12 h-12 rounded-full" alt="Profile">
-          <div class="overflow-hidden">
-            <h2 class="text-lg font-bold">Emily Davis</h2>
-            <p class="text-gray-500 text-sm">@emily</p>
-            <p class="text-gray-800 mt-2 truncate">The color gradients add a really nice touch!</p>
-          </div>
-        </div>
-      </div>
-      <div class="flex gap-4">
-        <div class="bg-white p-4 shadow-md rounded-xl flex items-start gap-3 w-64 border border-gray-200">
-          <img src="https://randomuser.me/api/portraits/men/1.jpg" class="w-12 h-12 rounded-full" alt="Profile">
-          <div class="overflow-hidden">
-            <h2 class="text-lg font-bold">John Doe</h2>
-            <p class="text-gray-500 text-sm">@john</p>
-            <p class="text-gray-800 mt-2 truncate">I'm at a loss for words. This is amazing. I love it.</p>
-          </div>
-        </div>
+       
         <div class="bg-white p-4 shadow-md rounded-xl flex items-start gap-3 w-64 border border-gray-200">
           <img src="https://randomuser.me/api/portraits/women/2.jpg" class="w-12 h-12 rounded-full" alt="Profile">
           <div class="overflow-hidden">
@@ -388,15 +392,7 @@
         <div class="md:w-1/2 text-left mb-6 md:mb-0">
           <h1 class="text-2xl font-bold mb-2">What is MJIT ?</h1>
           <p class="text-gray-600">
-            Jadi MJIT adalah company yang di buat oleh 4 orang santri smk, dan company ini di tunjukkan untuk umat
-            muslim
-            yang ingin mempelajari tentang dunia it, dan di company ini kami memiliki tujuan untuk membuat umat muslim
-            itu
-            bisa membuka mata nya lebar lebar tentang perkembangan dunia it, dan disini kami berdiri demi umat muslim
-            yang
-            bisa membantu satu sama lain di masa yang akan datang dan kami yakin inshallah di masa depan nanti umat
-            muslim
-            akan sukses di bidang technologi yang akan selalu di perbarui <span class="">Learn More >></span>
+            MJIT adalah perusahaan yang didirikan oleh empat santri SMK dengan visi membangun umat Muslim yang melek teknologi. Dengan semangat inovasi dan edukasi, MJIT menghadirkan MJIT Course, sebuah program pembelajaran yang dirancang untuk memberikan pemahaman mendalam tentang teknologi modern dari perspektif Islam. Kursus ini tidak hanya mengajarkan keterampilan teknis tetapi juga menanamkan nilai-nilai Islami dalam penggunaannya, sehingga umat Muslim dapat lebih berdaya dalam era digital. <span class="">Learn More >></span>
 
           </p>
         </div>
@@ -784,111 +780,48 @@
   <section class="text-gray-600 body-font bg-black">
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-wrap -m-4">
-        <div class="p-4 md:w-1/3">
-          <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-            <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="/public/image/Softwaredev.jpg"
-              alt="blog">
-            <div class="p-6">
-              <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
-              <h1 class="title-font text-lg font-medium text-white mb-3">Software Developer</h1>
-              <p class="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
-                microdosing tousled waistcoat.</p>
-              <div class="flex items-center flex-wrap ">
-                <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More
-                  <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-                <span
-                  class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
-                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
-                    stroke-linejoin="round" viewBox="0 0 24 24">
-                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                    <circle cx="12" cy="12" r="3"></circle>
-                  </svg>1.2K
-                </span>
-                <span class="text-gray-400 inline-flex items-center leading-none text-sm">
-                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
-                    stroke-linejoin="round" viewBox="0 0 24 24">
-                    <path
-                      d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
-                    </path>
-                  </svg>6
-                </span>
+        <div class="flex flex-wrap -m-4">
+          <!-- Card 1 -->
+          <div class="p-4 md:w-1/3">
+            <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+              <div class="overflow-hidden"> 
+                <img class="lg:h-48 md:h-36 w-full object-cover object-center transform transition-transform duration-300 hover:scale-110" src="/public/image/Softwaredev.jpg" alt="blog">
+              </div>
+              <div class="p-6">
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
+                <h1 class="title-font text-lg font-medium text-white mb-3">Software Developer</h1>
+                <p id="desc1" class="leading-relaxed mb-3">Seorang software developer website mengembangkan dan memelihara aplikasi web...</p>
+                <button id="toggleBtn1" class="text-indigo-500 inline-flex items-center">Show More</button>
               </div>
             </div>
           </div>
-        </div>
-        <div class="p-4 md:w-1/3">
-          <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-            <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="/public/image/Network.jpg" alt="blog">
-            <div class="p-6">
-              <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
-              <h1 class="title-font text-lg font-medium text-white mb-3">Network Engineer</h1>
-              <p class="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
-                microdosing tousled waistcoat.</p>
-              <div class="flex items-center flex-wrap">
-                <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More
-                  <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-                <span
-                  class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
-                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
-                    stroke-linejoin="round" viewBox="0 0 24 24">
-                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                    <circle cx="12" cy="12" r="3"></circle>
-                  </svg>1.2K
-                </span>
-                <span class="text-gray-400 inline-flex items-center leading-none text-sm">
-                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
-                    stroke-linejoin="round" viewBox="0 0 24 24">
-                    <path
-                      d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
-                    </path>
-                  </svg>6
-                </span>
+        
+          <!-- Card 2 -->
+          <div class="p-4 md:w-1/3">
+            <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+              <div class="overflow-hidden"> 
+                <img class="lg:h-48 md:h-36 w-full object-cover object-center transform transition-transform duration-300 hover:scale-110" src="/public/image/Softwaredev.jpg" alt="blog">
+              </div>
+              <div class="p-6">
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
+                <h1 class="title-font text-lg font-medium text-white mb-3">Web Designer</h1>
+                <p id="desc2" class="leading-relaxed mb-3">Seorang web designer bertanggung jawab merancang tampilan dan pengalaman pengguna...</p>
+                <button id="toggleBtn2" class="text-indigo-500 inline-flex items-center">Show More</button>
               </div>
             </div>
           </div>
-        </div>
-        <div class="p-4 md:w-1/3">
-          <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-            <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="/public/image/Designer.jpg" alt="blog">
-            <div class="p-6">
-              <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
-              <h1 class="title-font text-lg font-medium text-white mb-3">Designer</h1>
-              <p class="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
-                microdosing tousled waistcoat.</p>
-              <div class="flex items-center flex-wrap ">
-                <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More
-                  <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-                <span
-                  class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
-                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
-                    stroke-linejoin="round" viewBox="0 0 24 24">
-                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                    <circle cx="12" cy="12" r="3"></circle>
-                  </svg>1.2K
-                </span>
-                <span class="text-gray-400 inline-flex items-center leading-none text-sm">
-                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
-                    stroke-linejoin="round" viewBox="0 0 24 24">
-                    <path
-                      d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
-                    </path>
-                  </svg>6
-                </span>
+        
+          <!-- Card 3 -->
+          <div class="p-4 md:w-1/3">
+            <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+              <div class="overflow-hidden"> 
+                <img class="lg:h-48 md:h-36 w-full object-cover object-center transform transition-transform duration-300 hover:scale-110" src="/public/image/Softwaredev.jpg" alt="blog">
+              </div>
+              <div class="p-6">
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
+                <h1 class="title-font text-lg font-medium text-white mb-3">Cyber Security</h1>
+                <p id="desc3" class="leading-relaxed mb-3">Cyber security specialist bertanggung jawab dalam melindungi data dan sistem dari serangan...</p>
+                <button id="toggleBtn3" class="text-indigo-500 inline-flex items-center">Show More</button>
               </div>
             </div>
           </div>
@@ -938,14 +871,12 @@
                     </svg>
                   </div>
 
-                  <p class="mt-0.5 text-lg font-medium text-gray-900">Paul Starr</p>
+                  <p class="mt-0.5 text-lg font-medium text-gray-900">Ahmad S. – Mahasiswa Teknik Informatika</p>
                 </div>
               </div>
 
               <p class="mt-4 text-gray-700">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit rerum incidunt, a
-                consequuntur recusandae ab saepe illo est quia obcaecati neque quibusdam eius
-                accusamus error officiis atque voluptates magnam!
+                "Saya awalnya merasa sulit memahami pemrograman, tetapi MJIT Course menjelaskannya dengan cara yang sederhana dan mudah dimengerti. Sekarang, saya sudah bisa membuat website sendiri dan bahkan mulai mengambil proyek freelance!"
               </p>
             </blockquote>
           </div>
@@ -981,14 +912,14 @@
                     </svg>
                   </div>
 
-                  <p class="mt-0.5 text-lg font-medium text-gray-900">Paul Starr</p>
+                  <p class="mt-0.5 text-lg font-medium text-gray-900">Fatimah R. – Guru Madrasah</p>
                 </div>
               </div>
 
               <p class="mt-4 text-gray-700">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit rerum incidunt, a
-                consequuntur recusandae ab saepe illo est quia obcaecati neque quibusdam eius
-                accusamus error officiis atque voluptates magnam!
+                "Sebagai seorang pendidik, saya ingin memasukkan teknologi dalam metode pengajaran saya. MJIT Course memberikan wawasan yang luar biasa tentang bagaimana teknologi dapat digunakan secara produktif dalam dunia pendidikan, tanpa meninggalkan nilai-nilai Islam."
+
+
               </p>
             </blockquote>
           </div>
@@ -1024,14 +955,12 @@
                     </svg>
                   </div>
 
-                  <p class="mt-0.5 text-lg font-medium text-gray-900">Paul Starr</p>
+                  <p class="mt-0.5 text-lg font-medium text-gray-900">Zaki H. – Pengusaha Startup Muslim</p>
                 </div>
               </div>
 
               <p class="mt-4 text-gray-700">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit rerum incidunt, a
-                consequuntur recusandae ab saepe illo est quia obcaecati neque quibusdam eius
-                accusamus error officiis atque voluptates magnam!
+                "Saya sangat mengapresiasi bagaimana MJIT Course mengajarkan teknologi dengan tetap mempertahankan etika Islami. Sekarang, saya lebih percaya diri dalam mengembangkan bisnis digital yang tetap sesuai dengan prinsip syariah."
               </p>
             </blockquote>
           </div>
@@ -1067,14 +996,12 @@
                     </svg>
                   </div>
 
-                  <p class="mt-0.5 text-lg font-medium text-gray-900">Paul Starr</p>
+                  <p class="mt-0.5 text-lg font-medium text-gray-900">Nadia A. – Ibu Rumah Tangga</p>
                 </div>
               </div>
 
               <p class="mt-4 text-gray-700">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit rerum incidunt, a
-                consequuntur recusandae ab saepe illo est quia obcaecati neque quibusdam eius
-                accusamus error officiis atque voluptates magnam!
+                "MJIT Course membantu saya memahami dunia digital, dari cara melindungi data pribadi hingga memanfaatkan teknologi untuk bisnis online. Sangat direkomendasikan bagi siapa saja yang ingin lebih paham teknologi tanpa takut melanggar nilai agama."
               </p>
             </blockquote>
           </div>
@@ -1120,8 +1047,7 @@
       </div>
 
       <p class="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 dark:text-gray-400">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt consequuntur amet culpa cum
-        itaque neque.
+        "Melek Teknologi, Berpegang pada Syariat, Membangun Umat yang Berdaya!"
       </p>
 
       <ul class="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
