@@ -2892,12 +2892,11 @@ h1,h2,h3,h4,h5,h6{
 .search-bar {
   --size: 45px;
   --padding: 3px;
-  --expanded-width: 600px;
+  --expanded-width: 400px;
 
   display: flex;
   justify-content: flex-end;
   background-color: #fff;
-  box-shadow: 0 10px 10px 0 #d6d9e2;
   border-radius: 100px;
   outline: 1px solid transparent;
   overflow: hidden;
